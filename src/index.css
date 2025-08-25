@@ -1,0 +1,40 @@
+
+/* Tailwind v4 style import */
+@import "tailwindcss";
+
+/* Global font stack to emulate Apple's look */
+:root {
+  --page-max: 1600px;
+}
+
+/* Apple-like typography */
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Utility: container widths */
+.container-max {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 40px);
+}
+
+/* Smooth gradients for hero */
+.gradient-pro {
+  background: radial-gradient(1000px 600px at 80% -100px, rgba(100, 100, 255, 0.35), transparent 60%),
+              radial-gradient(1000px 600px at 20% -100px, rgba(255, 100, 150, 0.35), transparent 60%);
+}
+.gradient-std {
+  background: radial-gradient(900px 500px at 50% -150px, rgba(100, 255, 200, 0.25), transparent 60%);
+}
+
+/* Subtle hairline borders */
+.hairline {
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.06);
+}
+/* Smooth transitions for hover animations */
+* {
+  transition: all 0.25s ease-in-out;
+}
